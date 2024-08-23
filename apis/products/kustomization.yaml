@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
 
-  - plan-trip_product_1.0.0.yaml
+  - plan-trip-product-1.0.0.yaml
   #- countries-product.yaml
   #- vehicle-info-product.yaml
   #- building-events-product.yaml
