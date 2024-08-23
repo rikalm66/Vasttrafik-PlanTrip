@@ -36,7 +36,7 @@ spec:
         enabled: true
   apis:
     apis:
-      - name: plan-trip_api
+      - name: plan-trip-api
   share:
     apim:
       providerOrg: epical
@@ -48,4 +48,4 @@ metadata:
   name: plan-trip_api
 spec:
   definition:
-    configMap: plan-trip_api-cm
+    configMap: plan-trip-api-cm
