@@ -1,0 +1,48 @@
+apiVersion: apiconnect.ibm.com/v1beta1
+kind: Product
+metadata:
+  name: new-plan-trip-product
+spec:
+  state: Published
+  definition:
+    product: 1.0.0
+    info:
+      title: Plan your Trip
+      name: new-plan-trip-product
+      description: >-
+        Plan your trip with Vasttrafik
+      version: '1.0'
+    plans:
+      default-plan:
+        rate-limits:
+          default:
+            value: 100/1hour
+        title: Default Plan
+        description: Default Plan
+        approval: false
+    visibility:
+      view:
+        type: public
+        orgs: []
+        tags: []
+        enabled: true
+      subscribe:
+        type: authenticated
+        orgs: []
+        tags: []
+        enabled: true
+  apis:
+    apis:
+      - name: plan-trip-api
+  share:
+    apim:
+      providerOrg: epical
+      catalog: epical-dev
+---
+apiVersion: apiconnect.ibm.com/v1beta1
+kind: API
+metadata:
+  name: plan-trip-api
+spec:
+  definition:
+    configMap: plan-trip-api-cm
